@@ -11,6 +11,6 @@ class CursoController extends Controller
     //
     public function index(){
         $rows = Curso::all();
-        return view('admin\curso\index',compact('rows'));
+        return view('admin.curso.index',compact('rows'));
     }
 }
