@@ -11,7 +11,7 @@ class CursoController extends Controller
     //
     public function index(){
         $rows = Curso::all();
-        return view ('admin\cursos\index', compact('rows'));
+        return view ('admin.cursos.index', compact('rows'));
     }
 
     public function adicionar() {

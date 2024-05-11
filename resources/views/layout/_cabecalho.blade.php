@@ -12,7 +12,6 @@
     </head>
 
     <body>
-
         <nav>
             <div class="nav-wrapper deep-orange">
                 <a href="#!" class="brand-logo">Projeto Cursos</a>
