@@ -4,10 +4,10 @@
     <div class="container">
         <h3 class="center">Adicionar Curso</h3>
         <div class="row">
-        <input type="hidden" name="_method" value="put">
             <form class="" action="{{route('admin.cursos.salvar')}}" 
-                method="put" enctype="multipart/form-data">
+                method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
+                <input type="hidden" name="_method" value="put">
                 @include('admin.cursos._form')
                 <button class="btn deep-orange">Salvar</button>
             </form>

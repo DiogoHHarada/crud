@@ -14,7 +14,7 @@ Route::get('/admin/cursos/adicionar',
 ['as' =>'admin.cursos.adicionar',
 'uses'=>'App\Http\Controllers\Admin\CursoController@adicionar']);
 
-Route::post('/admin/cursos/salvar',
+Route::put('/admin/cursos/salvar',
 ['as' =>'admin.cursos.salvar',
 'uses'=>'App\Http\Controllers\Admin\CursoController@salvar']);
 

@@ -7,6 +7,7 @@
             <form class="" action="{{route('admin.cursos.atualizar', $linha->id)}}" 
                   method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
+                <input type="hidden" name="_method" value="put">
                 @include('admin.cursos._form')
                 <button class="btn deep-orange">Atualizar</button>
             </form>
