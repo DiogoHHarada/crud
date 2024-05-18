@@ -161,7 +161,7 @@
                             </div>
                         </div>
                     </main>
-
+                    <a href="http://127.0.0.1:8000/admin/cursos"><button> Lista de Cursos</button></a>         
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </footer>

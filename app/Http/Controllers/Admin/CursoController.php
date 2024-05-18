@@ -16,8 +16,9 @@ class CursoController extends Controller
 
     public function adicionar() {
         return view('admin.cursos.adicionar');
-        }
-        public function salvar(Request $req) {
+    }
+
+    public function salvar(Request $req) {
             $dados = $req->all();
             if(isset($dados['publicado'])){
                 $dados['publicado'] = 'sim';
