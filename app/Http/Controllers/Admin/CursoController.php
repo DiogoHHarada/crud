@@ -55,7 +55,7 @@ class CursoController extends Controller
             $imagem = $req->file('arquivo');
             $num = rand(1111,9999);
             $dir = "img/cursos/";
-            $ex = $imagem->guessClientExtension();
+            $ex = $imagem -> guessClientExtension();
             $nomeImagem = "imagem_".$num.".".$ex;
             $imagem->move($dir,$nomeImagem);
             $dados['imagem'] = $dir."/".$nomeImagem;
