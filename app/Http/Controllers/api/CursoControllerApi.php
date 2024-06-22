@@ -29,9 +29,9 @@ class CursoControllerApi extends Controller
 
     public function update(Request $req, $id){
         if(Curso::find($id)->update($req->all()) ){
-            return response('OK',200);
+            return response('OK',200);  // ststusCode 200 se Ok
         }else{
-            return response('',404);
+            return response('',404); // statusCode 404 se não enconttrado
         }
     }
 
@@ -39,12 +39,12 @@ class CursoControllerApi extends Controller
         $cursoEncontrado = Curso::find($id);
         if($cursoEncontrado){
             if($cursoEncontrado->delete()){
-                return response('OK',200);
+                return response('OK',200);  // ststusCode 200 se Ok
             } else{
                 return response('',400);
             } 
         } else{
-           return response('',404);
+           return response('',404); // statusCode 404 se não enconttrado
         }
     }
 }
