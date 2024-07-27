@@ -28,6 +28,7 @@
         <img width="150" src="{{asset($linha->imagem)}}" />
     </div>
 @endif
+
 <div class="input-field">
     <p>
         <label>

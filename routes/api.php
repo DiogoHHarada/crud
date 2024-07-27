@@ -8,4 +8,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::ApiResource('curso',
-'App\Http\Controllers\api|CursoControllerApi');
+'App\Http\Controllers\api\CursoControllerApi');
