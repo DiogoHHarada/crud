@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/',
+['as'=>'site.home',
+'uses'=>'App\Http\Controllers\Site\HomeController@index']);
+
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/admin/cursos',
     ['as' =>'admin.cursos',
@@ -28,15 +32,12 @@ Route::group(['middleware'=>'auth'], function(){
     'uses'=>'App\Http\Controllers\Admin\CursoController@excluir']);
 });
 
-Route::get('/',
-['as'=>'site.home',
-'uses'=>'App\Http\Controllers\Site\HomeController@index']);
 
-Route::get('/login', ['as' => 'site.login',
+Route::get('/login', ['as' => 'login',
 'uses'=>'App\Http\Controllers\Site\LoginController@index']);
 
-Route::post('/login/entrar',['as'=>'site.login.entrar',
+Route::post('/login/entrar',['as'=>'login.entrar',
 'uses'=>'App\Http\Controllers\Site\LoginController@entrar']);
 
-Route::get('/login/sair',['as'=>'site.login.sair',
+Route::get('/login/sair',['as'=>'login.sair',
 'uses'=>'App\Http\Controllers\Site\LoginController@sair']);
