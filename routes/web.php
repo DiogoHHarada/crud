@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-//Route::group({'middleware'=>'auth'},function(){
+Route::group(['middleware'=>'auth'], function(){
     Route::get('/admin/cursos',
     ['as' =>'admin.cursos',
     'uses'=>'App\Http\Controllers\Admin\CursoController@index']);
@@ -26,7 +26,11 @@ use Illuminate\Support\Facades\Route;
     Route::get('/admin/cursos/excluir/{id}',
     ['as' =>'admin.cursos.excluir',
     'uses'=>'App\Http\Controllers\Admin\CursoController@excluir']);
-//});
+});
+
+Route::get('/',
+['as'=>'site.home',
+'uses'=>'App\Http\Controllers\Site\HomeController@index']);
 
 Route::get('/login', ['as' => 'site.login',
 'uses'=>'App\Http\Controllers\Site\LoginController@index']);
